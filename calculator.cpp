@@ -71,6 +71,69 @@ digit * loadNumber(ifstream & file)
 	return head;
 }
 
+char getOperator(ifstream & file)
+{
+	char op;
+	string disc;
+	
+	file.get(op);
+	getline(file, disc);
+	
+	return op;
+}
+
+void writeNumber(digit * num, ofstream & file)
+{
+	digit *writeDigit = nullptr;
+	
+	for(writeDigit = num; writeDigit != nullptr; writeDigit = writeDigit->next)
+	{
+		file<<writeDigit->data;
+	}
+	
+	file<<endl;
+}
+
+void deleteNumber(digit * num)
+{
+	digit *deleteDigit = nullptr;
+	while(num != nullptr)
+	{
+		deleteDigit = num;
+		num = num->next;
+		delete deleteDigit;
+	}
+}
+void printNumrecurse(digit * num)
+{
+	return;
+}
+
+void printNum(digit * num)
+{
+	return;
+}
+
+void writeNumRecurse(digit * num, ofstram & file)
+{
+	return;
+}
+
+void subCarry(digit * head, digit * prev)
+{
+	return;
+}
+
+void setNeg(digit * num)
+{
+	return;
+}
+
+digit * subNumbers(digit * left, digit * right)
+{
+	return nullptr;
+}
+
 int main()
 {
 	digit * left * right * result;
